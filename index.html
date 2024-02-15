@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># Disclaimer I am not a programmer,</span><br/>
+			<span class="comments"># so this is might get fucked up, but I love you a lot so don't bully me.</span><br/>
+			<span class="comments">A little story</span><br/>
+			We met in a really not expected way(<span class="string"></span>);<br/>
+			We both were confused and curious(<span class="string"></span>);<br/>
+			<span class="comments"># Around Dec 22, 2020, we met! </span><br/>
+			It doesnt really matter as long as we are togather<br/>
+			<span class="comments"># Afterwards, I KINDA confessed to you. </span><br/>
+			Do you remember?<br/>
+			<span class="comments"># Feb 02, 2021, You became my girlfriend.</span><br/>
+			We kinda made that day up yk<br/>
+			<span class="comments"># Since then, we spent harmony happiness life every day.</span><br/>
+			Do you think otherwise? fight me<br/>
+			<span class="comments"># We enjoy playing together.</span><br/>
+			We should play more<br/>
+			<span class="comments"># We enjoy watching together.</span><br/>
+			I want to watch the movies before the awards<br/>
+			<span class="comments"># We enjoy talking together.</span><br/>
+			weeell<br/>
+			<span class="comments"># We enjoy weekends together.</span><br/>
+			This weekend is ours DO U UNDERSTAND??<br/>
+			<span class="comments"># Sometimes there are a few conflicts between us.</span><br/>
+			Weeelll it happens=<span class="keyword"></span>)<br/>
+			<span class="comments"># But we are getting more and more in harmony together.</span><br/>
+			Gordita <br/>
+			 <br/>
+			<span class="comments"># You are the greatest love of my life.</span><br/>
+			<span class="comments"># Waiting for the day we can do this in the same room and have our date togather</span><br/>
+			<span class="comments"># I love you gordita.</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+
+					<div id="messages">Ale, I have fallen in love with you for </div>
+				</div>
+				<div id="loveu">
+					Love u Baby.<br/>
+					<div class="signature">Me and You</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		Made by <a href='https://open.spotify.com/track/3Eb5sztvEMa0Mqnb8DUAlU?si=1a133920e0b444a6'>me I am the best</a>
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2018, 10, 5);
+	together.setHours(15);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
